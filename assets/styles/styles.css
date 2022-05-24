@@ -1,0 +1,86 @@
+:root {
+    --size-col: 25px;
+    --size-row: calc(var(--size-col) / 1);
+    /* --wall-color: rgb(241, 241, 241);
+    --path-color: rgb(255, 255, 255);
+    --wall-color-opacity: rgb(249, 249, 249); */
+    --wall-color: rgb(71, 248, 204);
+    --path-color: rgb(255, 255, 255);
+    --wall-color-opacity: rgb(1, 168, 146);
+}
+
+body {
+    margin: 0;
+    /* background-color: rgb(19, 19, 19); */
+    background-color: whitesmoke;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.maze {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: content-box;
+    position: relative;
+    background-color: white;
+    transform: rotateX(32deg) rotateY(-12deg) rotateZ(12deg);
+    /* border: var(--size) solid var(--wall-color); */
+}
+
+.case {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-shrink: 0;
+    width: var(--size-col);
+    height: var(--size-row);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.agent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-shrink: 0;
+    width: var(--size-col);
+    height: var(--size-row);
+    background-color: rgb(240, 212, 0);
+}
+
+.agent::before, .case.type-0::before {
+    content: "";
+    display: block;
+    position: relative;
+    top: -5px;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+}
+
+.case.type-0 {
+    background-color: var(--wall-color-opacity);
+}
+
+.case.type-0::before {
+    background-color: var(--wall-color);
+}
+.agent::before {
+    background-color: rgb(251, 255, 5);
+}
+
+.case.type-1 {
+    background-color: var(--path-color);
+}
