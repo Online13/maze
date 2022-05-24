@@ -11,7 +11,7 @@ You only need browser and just clone the project and open [index.html](./index.h
 
 ## Usage
 
-This project generate maze randomly using [algorithm](). At beginning, we see the maze building itself, and we see a small individual appear who can move in the maze. 
+This project generate maze randomly using [Randomized Kruskal's algorithm](https://en.wikipedia.org/wiki/Maze_generation_algorithm). At beginning, we see the maze building itself, and we see a small individual appear who can move in the maze. 
 
 >This project is still under development, so there is no specific user goal yet.
 
